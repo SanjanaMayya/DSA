@@ -16,12 +16,13 @@ for n in [n1, n2, n3]:
 
     print(f"Time taken for n = {n} is {end - start:.6f} seconds")"""
 
+#Example of O(1) Complexity
 import time
 
 def linear_time(n):
     print(f"\nO(n) for n = {n}")
     start = time.time()
-    for i in range(n):
+    for _ in range(n): #because using i in for loop causes linting warning issues
         pass # Simulate some work
     end = time.time()
     print(f"Time Taken: {end - start:.6f} seconds")
